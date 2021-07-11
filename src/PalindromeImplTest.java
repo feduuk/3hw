@@ -1,19 +1,22 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-class PalindromeClassTest {
+class PalindromeImplTest {
     @Test
     void isPalindromeTest(){
-        PalindromeClass palindrome = new PalindromeClass();
+        PalindromeImpl palindrome = new PalindromeImpl();
         assertTrue(palindrome.isPalindrome(101));
+        assertTrue(palindrome.isPalindrome(101101));
+        assertTrue(palindrome.isPalindrome(1));
+        assertTrue(palindrome.isPalindrome(0));
     }
     @Test
     void isPalindromeNegativeNumberTest(){
-        PalindromeClass palindrome = new PalindromeClass();
+        PalindromeImpl palindrome = new PalindromeImpl();
         assertTrue(palindrome.isPalindrome(-334433));
     }
     @Test
     void isPalindromeFalseTest(){
-        PalindromeClass palindrome = new PalindromeClass();
+        PalindromeImpl palindrome = new PalindromeImpl();
         assertFalse(palindrome.isPalindrome(10));
     }
 
